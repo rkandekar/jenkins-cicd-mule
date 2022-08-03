@@ -9,6 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="jenkins-cicd-muleFlow" doc:id="06eda4b1-9676-486b-8894-639e9d417b34" >
 		<http:listener doc:name="Listener" doc:id="56333c20-6142-4045-afcf-5856056885a8" config-ref="HTTP_Listener_config" path="/ping"/>
+		<logger level="INFO" doc:name="Logger" doc:id="24f46d26-68d3-4163-8a7e-36c4db210495" message="output seccess log"/>
 		<set-payload value="output seccess" doc:name="Set Payload" doc:id="bb2cbd1e-186f-41d7-b321-fbdbf6694002" />
 	</flow>
 </mule>
