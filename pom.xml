@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
@@ -30,30 +32,24 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<skipTests>true</skipTests>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.4.0</muleVersion>
-						<applicationName>jenkins-cicd-mule</applicationName>
 						<connectedAppClientId>5e1c0dcf689d475d8fe0f7f7187883dd</connectedAppClientId>
 						<connectedAppClientSecret>1B649363257A4c048Da2bc9553838199</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<businessGroupId>37513a5c-61c8-4566-8c30-c9d2a08150d8</businessGroupId>
+						<applicationName>sandbox-jenkins-cicd-mule-rakesh</applicationName>
 						<environment>BCSandboxHub</environment>
 						<region>us-east-1</region>
 						<workers>1</workers>
 						<workerType>MICRO</workerType>
 						<properties>
-							<mule.env>dev</mule.env>
-							<mule.secure.key>asfsd</mule.secure.key>
-							<anypoint.platform.client_id>7a634adbafa442289aa3a0b483101f75</anypoint.platform.client_id>
-							<anypoint.platform.client_secret>eB233D308B30481F83E2C4FAB87c6520</anypoint.platform.client_secret>
+							<key>value</key>
 						</properties>
 					</cloudHubDeployment>
-					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
-			
 		</plugins>
 	</build>
 
